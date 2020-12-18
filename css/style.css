@@ -1,0 +1,288 @@
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #98acf8;
+  border-width: 15px;
+  height: 0px;
+  width: 15%;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+/* Welcome section */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  background: #16222a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3a6073,
+    #16222a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3a6073,
+    #16222a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  font-family: "Sacramento", cursive;
+  font-weight: 700;
+  width: 100%;
+  background: -webkit-linear-gradient(#ff4b2b, #ff416c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  word-spacing: 10px;
+  text-align: center;
+  font-size: 15rem;
+}
+
+.welcome-section > p {
+  font-size: 5.5rem;
+  font-weight: 200;
+  text-align: center;
+  font-style: italic;
+  font-family: "Langar", cursive;
+  width: 100%;
+  background: -webkit-linear-gradient(#43c6ac, #f8ffae);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.info {
+  background-image: linear-gradient(
+    to right,
+    #243949 0%,
+    #517fa4 100%
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.hey {
+  margin-top: 7%;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-size: 10rem;
+  font-family: "Caveat", cursive;
+}
+.profile {
+  margin-top: 3%;
+  margin-bottom: 4%;
+  line-height: 1.3;
+  width: 75%;
+  text-align: center;
+  font-size: 250%;
+  font-family: "Texturina", serif;
+}
+.intro {
+  margin-top: 3%;
+  font-size: 4rem;
+  word-spacing: 20px;
+}
+.profile-pic {
+  height: 230px;
+
+  float: right;
+  background-color: white;
+  border-radius: 50%;
+}
+.skillhead {
+  margin-top: 3%;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-size: 10rem;
+  font-family: "Caveat", cursive;
+}
+.wd {
+  margin-top: 3%;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-size: 6rem;
+  font-family: "Caveat", cursive;
+}
+.skill-row1 {
+  margin-top: 1%;
+  margin-bottom: 4%;
+  line-height: 1.3;
+  width: 75%;
+  text-align: center;
+  font-size: 250%;
+  font-family: "Texturina", serif;
+}
+.wd-desc {
+  margin-top: 2%;
+  font-size: 4rem;
+  word-spacing: 20px;
+}
+.web-img {
+  height: 230px;
+  float: left;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.ad {
+  margin-top: 2.5%;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-size: 6rem;
+  font-family: "Caveat", cursive;
+}
+.skill-row2 {
+  margin-top: 1%;
+  margin-bottom: 4%;
+  line-height: 1.3;
+  width: 75%;
+  text-align: center;
+  font-size: 250%;
+  font-family: "Texturina", serif;
+}
+.ad-desc {
+  margin-top: 2%;
+  font-size: 4rem;
+  word-spacing: 20px;
+}
+.flutter {
+  height: 230px;
+  float: right;
+  background-color: white;
+  border-radius: 50%;
+}
+.contact-me {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.getin {
+  font-size: 5.1rem;
+  font-family: "Caveat", cursive;
+}
+.help {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 4rem;
+  width: 70%;
+  word-spacing: 3px;
+
+  font-family: "Texturina", serif;
+}
+
+.mail {
+  height: 7%;
+}
+.insta {
+  height: 7%;
+}
+.whatsapp {
+  height: 7%;
+}
+.call {
+  height: 7%;
+}
+.buttons {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.copyright {
+  margin-top: 10%;
+  margin-bottom: 1%;
+  font-size: 2rem;
+  font-family: "Rajdhani", sans-serif;
+  color: aliceblue;
+}
+.btn {
+  width: 100%;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 80px;
+}
