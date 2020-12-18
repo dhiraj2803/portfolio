@@ -155,7 +155,7 @@ h1 {
   word-spacing: 20px;
 }
 .profile-pic {
-  height: 350px;
+  height: 400px;
 
   float: right;
   background-color: white;
@@ -196,7 +196,7 @@ h1 {
   word-spacing: 20px;
 }
 .web-img {
-  height: 3500px;
+  height: 400px;
   float: left;
   background-color: white;
   border-radius: 50%;
@@ -227,7 +227,7 @@ h1 {
   word-spacing: 20px;
 }
 .flutter {
-  height: 350px;
+  height: 400px;
   float: right;
   background-color: white;
   border-radius: 50%;
